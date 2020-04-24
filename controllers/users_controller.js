@@ -1,6 +1,6 @@
 const TODO=require('../models/Todo');
 
-module.exports.create=function(req,res){
+module.exports.create=function(req,res){        //Data added to the database here
     TODO.create({
         description:req.body.description,
         date:req.body.date,
@@ -15,7 +15,7 @@ module.exports.create=function(req,res){
     });
 };
 
-module.exports.removeTask=function(req,res){
+module.exports.removeTask=function(req,res){        //Delete function for deleting data from database
     var id=req.query;
     console.log(id);
     var count=Object.keys(id).length;
