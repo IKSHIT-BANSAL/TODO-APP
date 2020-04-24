@@ -1,0 +1,149 @@
+#todo-app{
+    width:40vw;
+    height: auto;
+    border:2px solid black;
+    margin-left: 25%;   
+}
+#todo-app h1{
+    text-align: center;
+    color: slateblue;
+}
+
+#unorder-list{
+    list-style: none;
+}
+#description{
+    text-align: left;
+    width:100%;
+    height:5rem;
+    border-bottom:1px solid black;
+    border-top: 1px solid black;
+    font-size: 16px;
+}
+#description:hover{
+    background-color: whitesmoke;
+}
+#text{
+    margin:4px;
+    margin-left: 10px;
+    font-size: 13px;
+}
+#description input{
+    display: block;
+    text-align: left;
+    margin-top: 4px;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+}
+#deleteForm button{
+    display: inline-block;
+    margin-left: 18rem;
+    margin-top: -4.2rem;
+}
+form input{
+    border:none;
+    background-color: whitesmoke;
+}
+
+#category{
+    border-bottom:1px solid black;
+    border-right: 1px solid black;
+    width:50%;
+    height:auto;
+    display: inline-block;
+    border-left: none;
+}
+#category:hover{
+    background-color: whitesmoke;
+}
+#select{
+    border: none;
+    width: 90%;
+    padding: 7px;
+    margin-bottom: 7px;
+    font-size: 15px;
+    background-color: whitesmoke;
+}
+
+#date{
+    border-bottom:1px solid black;
+    width:49.8%;
+    height: auto;
+    display: inline-block;
+    margin-left: -4px;
+}
+#date:hover{
+    background-color: whitesmoke;
+}
+#date-select{
+    padding: 5px;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+#button{
+    width: 100%;
+    height: auto;;
+}
+#add{
+    margin-left: 25%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    width:9rem;
+    height: 3rem;
+}
+#add #img{
+    margin-right: 5px;
+}
+#delete{
+    padding: 15px;
+    width:9rem;
+    height: 3rem;
+    background-color: red;
+    color: white;    
+}
+#delete i{
+    margin-right: 5px;
+}
+
+#enter-data{
+    height: auto;
+    margin-left: -10px;
+}
+hr{
+    margin-left: -40px;
+}
+#left{
+    width:80%;
+    height: auto;
+    display: inline-block;
+}
+#left #descP{
+    font-size: 18px;
+    text-transform: capitalize;
+}
+#left #date-img{
+    opacity: 0.8;
+}
+#left input{
+    display: inline-block;
+}
+#left #descP{
+    display: inline-block;
+}
+#left #date-img{
+    margin-left: 20px;
+    margin-top: -6px;
+}
+#right{
+    width: 15%;
+    height: auto;
+    display: inline-block;
+    text-align: center;
+    margin:10px;
+    color: white;
+}

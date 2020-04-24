@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <title>
+            <%= title %>
+        </title>
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    </head>
+    <body>
+        <div id="todo-app">
+            <h1>TODO App </h1>
+
+            <!-- Request is sent here to add data to database -->
+            <form action="/add-list" method="POST" id="addForm">
+                <div id="description">
+                    <p id="text">DESCRIPTION</p>
+                    <input type="text" name="description" placeholder="What do you need to do ?" required>
+                </div>
+
+                <div id="category"> 
+                    <p id="text">CATEGORY</p>            
+                    <select name="category" id="select" required placeholder="Choose a category">
+                        <option>Choose a category</option>
+                        <option>School</option>
+                        <option>College</option>
+                        <option>Work</option>
+                        <option>Office</option>
+                        <option>Cleaning</option>
+                        <option>Other</option>
+                    </select>
+                </div>    
+
+                <div id="date">
+                    <p id="text">DUE DATE</p> 
+                    <input type="date" name="date" id="date-select" required>
+                 </div>
+
+                <div id="button">
+                    <button type="submit" id="add">
+                        <i class="fas fa-plus" id="img"></i>
+                        ADD TASK
+                    </button>   
+            </form>
+
+            <!-- Request is sent here to delete data from database -->
+            <form action="/delete-todo" method="GET" id="deleteForm">
+                <button type="submit" id="delete">
+                    <i class="far fa-trash-alt"></i>
+                    DELETE TASK
+                </button>   
+
+                <ul id="unorder-list">
+                    <% for(let i of Mylist) {%>
+                        <hr>
+                        <li>
+                            <div id="enter-data">                                   
+                                <div id="left">                               
+                                        <input type="checkbox" name="<%= i._id %>" >                                   
+                                    <p id="descP">
+                                        <b>
+                                            <%= i.description %>
+                                        </b>
+                                    </p>
+                                    <p id="date-Img">
+                                        <i class="fas fa-calendar-alt"></i>
+                                        <%= i.date %>
+                                    </p>                                            
+                                </div>
+                                    
+                                <div id="right" class="rightCard">
+                                    <p id="card"><%= i.category %></p>  
+                                </div>   
+
+                            </div>
+                        </li>
+    
+                    <% }%>
+                </ul>          
+            </form>
+        </div>
+
+        <script type="text/javascript" src="/js/script.js"></script>
+    </body>
+</html>
