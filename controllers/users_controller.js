@@ -15,3 +15,18 @@ module.exports.create=function(req,res){
     });
 };
 
+module.exports.removeTask=function(req,res){
+    var id=req.query;
+    console.log(id);
+    var count=Object.keys(id).length;
+    console.log(count);
+    for(let i=0;i<count;i++){
+        TODO.findByIdAndDelete(Object.keys(id),function(err){
+            if(err){
+                console.log("Error");
+                return;
+            }
+        });
+    }
+    return res.redirect('back');
+}
